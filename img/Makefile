@@ -1,11 +1,11 @@
 .PHONY: all clean
 
-ASSETS := $(patsubst src/%.svg, %.pdf, $(wildcard src/*.svg))
+ASSETS := $(patsubst src/%.svg, dist/%.pdf, $(wildcard src/*.svg))
 
 all: $(ASSETS)
 
 clean:
-	$(RM) *.pdf
+	$(RM) dist/*.pdf
 
-%.pdf: src/%.svg
+dist/%.pdf: src/%.svg
 	inkscape --export-area-drawing --export-pdf=$(PWD)/$@ --without-gui $(realpath $<)

@@ -21,6 +21,8 @@
 \usepackage[utf8]{inputenc}
 \usepackage{lipsum}
 \usepackage{listings}
+\usepackage{float}
+\usepackage{wrapfig}
 %\usepackage{tikz}
 
 % dnd package options 
@@ -44,7 +46,7 @@
 \parbox[b][\paperheight]{\paperwidth}{%
 \vfill
 \centering
-\includegraphics[width=\paperwidth,height=\paperheight]{underdark.jpg}%
+\includegraphics[width=\paperwidth,height=\paperheight]{img/dist/underdark.jpg}%
 \vfill
 }}}
 
@@ -55,10 +57,15 @@
 			pdfcreator={XeLaTeX}]{hyperref}
 
 \usepackage{fontspec}
+\usepackage{caption}
 \usepackage{xunicode}
+
 \defaultfontfeatures{Mapping=tex-text}
+\newfontfamily\figcapfont{Zapfino}% Some other font
+\DeclareCaptionFormat{figcapfont}{\figcapfont #1#2#3}
+\captionsetup[figure]{format=figcapfont}
 \setmainfont{ScalaSans}
-\setsansfont{Dungeon}
+\setsansfont{DungeonFixed}% Based on the Dungeon font (filename "DUNGRG__.ttf"), with added glyphs for single right quote and right-left double quotes
 \titleformat*{\chapter}{\Huge\sffamily}
 
 
@@ -70,50 +77,186 @@
 \AddToShipoutPicture*{\BackgroundPic}
 \begin{titlepage}
 \centering
-\includegraphics[width=0.5\paperwidth,keepaspectratio]{img/title.pdf}\\
+\includegraphics[width=0.5\paperwidth,keepaspectratio]{img/dist/title.pdf}\\
 {\Large \color{white} \textasciitilde{} The Captive Chronicles Pt. 1 \textasciitilde}
 \end{titlepage}
 
 \chapter*{Introduction}
-Deep beneath the surface of the world lies the Underdark. a realm of endless labyrinthine tunnels and caverns where the Sun never shines. The Underdark is filled with races and creatures too numerous to count or list, and foremost among these are the dark elves- the drow. Hated and feared even by their fellow dwellers in darkness, the drow raid other settlements in the Underdark as well as the surface world, taking prisoners back with them. Rendered unconscious with drow poison, then collared and shackled, these prisoners are eventually sold as slaves or entertainment in the dark elves' subterranean cities. 
+Deep beneath the surface of the world lies the Underdark. a realm of endless labyrinthine tunnels and caverns where the Sun never shines. The Underdark is filled with races and creatures too numerous to count or list, and foremost among these are the dark elves- the Drow. Hated and feared even by their fellow dwellers in darkness, the Drow raid other settlements in the Underdark as well as the surface world, taking prisoners back with them. Rendered unconscious with Drow poison, then collared and shackled, these prisoners are eventually sold as slaves or entertainment in the dark elves' subterranean cities. 
 
-Our adventurers have all had the misfortune of falling to such a fate. Captured by the drow, they are prisoners at one of the Drow's outposts awaiting transport to the great slave city of Menzobarranzan, the city of spiders.
+Our adventurers have all had the misfortune of falling to such a fate. Captured by the Drow, they are prisoners at one of the Drow's outposts awaiting transport to the great slave city of Menzobarranzan, the city of spiders.
 
 \chapter{1. Captive}
-In the suffocating, malodorous dark of large cell in the Drow outpost's prison, a scheme was being formulated. The man doing the scheming, a tall Wood Elf in his mid 20's with short, messy, chestnut colored hair and emerald eyes, was named Dox Evenwood, and he felt that he and his companion Jhank had spent far too long in the cell already. Jhank was a hulking 7ft Lizardman, with olive-green scales and a bright orange/yellow fin protruding from the top of his head to about his shoulder blades. Both were frustrated with their situation, but Jhank was approaching furious.\\
+In the suffocating, malodorous dark of large cell in the Drow outpost's prison, a scheme was being formulated. The man doing the scheming, a tall Wood Elf in his mid 20's with short, messy, chestnut colored hair and emerald eyes, was named Dox Evenwood, and he felt that he and his companion Jhank had spent far too long in the cell already. Jhank was a hulking 7' Lizardman, with olive-green scales and a bright orange/yellow fin protruding from the top of his head to about his shoulder blades. Both were frustrated with their situation, but Jhank was approaching furious.\\
 
 The cell in which the prisoners found themselves was quite large, and contained numerous exotic beings. By the dim, flickering torchlight, one can just make out the rocky walls of the enclosure, one of which played host to a row of chamberpots that the prisoners were made to empty each day by flinging their contents over the side of a gaping abyss just outside the cell doors. The rush of water could be heard faintly, as a waterfall poured over the side into fathomless black.\\
 
-With the recent arrivals, Dox felt confident an escape attempt was within their grasp. Already incarcerated upon their arrival was a host of interesting and potentially instrumental characters.\\
+With the recent arrivals, Dox felt confident an escape attempt was within their grasp. Already incarcerated upon their arrival was a host of interesting and potentially instrumental characters. The more resourceful among them had begun to squirrel away items that might prove useful in an escape attempt. Dox himself had acquired a crossbow which carried an odd smell, and Jhank had procured a heavy, solid bar of metal.\\
 
-Most unusual among them was what appeared to be a huge mushroom that stumbled around the cell on stumpy legs. It stood approximately 3.5 feet tall, and seemed to move back and forth somewhat fretfully, avoiding other prisoners. Occasionally, it would emit a puff of reddish particulate into the air from its cap. Prisoners have noticed that standing near the mushroom-man caused them to hear voices in their head, saying things such as "...the grove remembers..." and "...must return to the others...".\\
+Most unusual among them was what appeared to be a huge mushroom that stumbled around the cell on stumpy legs. It stood approximately 3.5 feet tall, and seemed to move back and forth somewhat fretfully, avoiding other prisoners. Occasionally, it would emit a puff of reddish particulate into the air from its cap. Prisoners have noticed that standing near the mushroom-man caused them to hear voices in their head, saying things such as "...the grove remembers..." and "...must return to the others...".
+\begin{wrapfigure}{R}{0.5\linewidth}
+	\centering
+	\includegraphics[width=0.7\linewidth]{img/dist/fish_man.png}
+	\caption{Fish-man\label{fig:fishman}}
+\end{wrapfigure}
 
-Another of the more reclusive prisoners was a large, pensive toad-like creature that seemed content to pass its time sitting by a wall. The fish-man rocked back and forth and periodically issued gutteral noises from deep within its throat. Despite the somewhat threatening size of the fish-man and the low, growl-like noises he was making, he appeared to be quite approachable, looking at those who passed nearby with a sort of mild, calm interest.
-\begin{center}
-	\includegraphics[width=0.45\textwidth]{img/src/fish_man.png}
-\end{center}
+Another of the more reclusive prisoners was a large, pensive toad-like creature that seemed content to pass its time sitting by a wall. The fish-man rocked back and forth and periodically issued guttural noises from deep within its throat. Despite the somewhat threatening size of the fish-man and the low, growl-like noises he was making, he appeared to be quite approachable, looking at those who passed nearby with a sort of mild, calm interest.\\
 
-In contrast, a large orc also co-inhabited the cell, and he appeared quite aggressive. The orc was clearly no stranger to fights, as it was heavily scarred and missing half of one tusk. The monster occasionally shot glares at Jhank, seemingly perceiving him as a threat (which Jhank responded to with casual indifference), and was never afraid to bellow at the guards, threatening all manner of colorful death and dismemberment.\\
+In contrast, a large orc also co-inhabited the cell, and he appeared quite aggressive. The orc was clearly no stranger to fights, as it was heavily scarred and missing half of one tusk. The monster occasionally shot glares at Jhank, seemingly perceiving him as a threat (which Jhank responded to with casual indifference), and was never afraid to bellow at the guards, threatening all manner of colorful death and dismemberment. A dwarf covered in tribal tattoos routinely shot venomous glances the orc's way. The dwarf sported a large beard and a clean-shaven head. Though his clothes were torn, it seems to be intentional and meant to make him look more intimidating.\\
+% \begin{figure}[H]
+% 	\centering
+% 	\includegraphics[width=0.2\textwidth]{img/dist/orc-prisoner.png}
+% 	\caption{Orc Prisoner\label{fig:orcPrisoner}}
+% \end{figure}
 
-Dox and Jhank had been languishing in a Drow prison for the past ten days. In that time, the pair and their fellow incarcerated had begun hoarding potentially useful objects that their captors had dropped or otherwise overlooked. Dox had managed to collect an crossbow bolt that had an odd smell, and Jhank concealed a rusty iron bar on his person. Shortly after their internment, the Drow Elf Danixoth had appeared, and somehow since then he had come into possession of a dull ruby and some gold pieces. One day ago, a Dwarf named Jurnthar Ironback arrived from a mining colony. Today, three new prisoners were thrown in. Adran Oakenheel the Wood Elf druid managed to fashion a makeshift 5 foot rope out of collected spider-webbing, Alchemist the Kenku gathered some gold pieces and Nithe the Tiefling managed to crack a shard of flint off of another rock while smashing rocks together out of boredom one night.\\
+%Dox and Jhank had been languishing in a Drow prison for the past ten days. In that time, the pair and their fellow incarcerated had begun hoarding potentially useful objects that their captors had dropped or otherwise overlooked. Dox had managed to collect an crossbow bolt that had an odd smell, and Jhank concealed a rusty iron bar on his person. Shortly after their internment, the Drow Elf Danixoth had appeared, and somehow since then he had come into possession of a dull ruby and some gold pieces. One day ago, a Dwarf named Jurnthar Ironback arrived from a mining colony. Today, three new prisoners were thrown in. Adran Oakenheel the Wood Elf druid managed to fashion a makeshift 5 foot rope out of collected spider-webbing, Alchemist the Kenku gathered some gold pieces and Nithe the Tiefling managed to crack a shard of flint off of another rock while smashing rocks together out of boredom one night.\\
 
-By comparing stories of their capture, the prisoners deduced that they had been drugged. As they were discussing this, a somewhat large tarantula hesitantly approached Jurnthar, seeming passive and as friendly as an arachnid can. Jurnthar whistled to the creature and extends a friendly hand, and it initially recoils, but is soon coaxed to a perch on the dwarf's shoulder. Adran looks about himself and sees that the ceiling 15 feet above them is engraved, though cannot make out the engravings. The door to the cell has two iron bar gateways. The cell contains a few chamberpots, which the prisoners have been made to empty several times.\\
+Another of the cell's more monstrous inhabitants was a furry behemoth of a quaggoth. Though the guards in the prison were often accompanied by quaggoths - which served as living indications of the consequences of stepping out of line - this one was apparently not affiliated with the Drow. The average quaggoth that could be seen skulking around the subterranean dungeon was a brute with wild, unkempt manes that lurched about on all fours, bordering on beast-live servitude to their Drow masters. The captive quaggoth, however, could frequently be seen grooming itself, and appeared to be attempting to stand upright like most humanoid creatures.\\
 
-A Drow routinely clutches the bars of the cell and nervously mumbles to himself "I am not guilty!" "I did not do it!" and he seems desperate to escape back to his former life.
+\begin{figure}[h]
+	\begin{paperbox}{Quaggoths}
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=0.7\textwidth]{img/dist/quaggoth.png}
+			\caption{Quaggoth\label{fig:quaggoth}}
+		\end{figure}
+		Quaggoths are humanoids with long, shaggy, white hair covering their entire bodies that typically stand between 5'6" and 7' tall and can weigh as much as 300lb. Though their origin is, as yet, unknown, there has been much speculation on the matter. Many believe them to have been bred by the Drow to serve as a slave race. Some sages claim that they were once a semi-civilized race that dominated much of the Underdark through conquest and ritual sacrifice, until the Drow, Duergar, and other races broke their power. Others have speculated they had some sort of civilization on the surface and were driven underground; this theory is supported by the quaggoths' hatred for surface-dwelling dwarves and elves.
+	\end{paperbox}
+\end{figure}
 
-A bald, purple-headed creature covered in grime is horrid to look at, but it belies an upbeat and positive nature, and a love of gambling. It is from his vast stash of gold that Alchemist and Danixoth 
+Just as perplexing was the case of the two Drow Elves interred with the other captives. Seemingly, the two had run afoul of their own kind, and were handling it much differently from one another. One could be seen every day without fail standing near the cell's entrance, typically clutching and the bars or pacing nervously, and always muttering to himself things such as "I am NOT guilty!" and "I did not do it!" While one Drow seemed desperate to convince an unseen conversational partner of his innocence, the other took to his imprisonment with apparent cool indifference, and had been standing against a wall for nearly as long as Dox and Jhank had been present in the cell. Somehow, the calmer Drow had found a ruddy ruby, which he could be seen examining and polishing for many an hour. Though unfriendly, the Drow were not shy, and the one with the jewel had given his name to an inquiring captive as "Danixoth".\\
 
-A dwarf with tribal tattoos and parts of his head shaved sits against the wall. His clothes are torn in an effort to be more intimidating. He does not get along well with the orc and wishes to return to his dwarven home
+Today, a trio of new prisoners had been thrown in with the rest. One was a Wood Elf who introduced himself as Adran Oakenhill, and was covered with an amount of dirt that unsettlingly looked as though it predated his capture. Another was a Kenku who identified himself as "Alchemist" - though whether that was his name or profession was anyone's guess - and seemed to get along well with one or two prisoners but avoided the others entirely. Finally, a Tiefling was among them, and had spent his time since arriving in a mixture of meditation and smashing rocks together; he seemed bored.\\
 
-Quigoth monster, the species which was observed to be used as the Drow's hired muscle. This Quigoth, however, appears to be grooming itself and standing straight in efforts to appear more civilized, if not friendly.
+Aside from these, the cell was also populated by a scattering of other characters. There was a pair of Underdeep Gnomes that appeared to be twins and talked to each other but never anyone else. Somewhat near the twins was a ragged and gaunt figure in tattered robes that might have been a dwarf if not for his gray skin, slight frame and diminutive stature (even by dwarven standards). There was also a purple-skinned man who, though covered in repulsive grime and muck, was quite friendly and forever attempted to engage his cell-mates in games of chance. From him, both Alchemist and Danixoth had won a small number of gold coins in wagers.\\
 
-A thin, dwarf-like creature in tattered robes and two underdeep gnomes (which whisper between each other but refuse to communicate with others and appear to be twins)\\
+All told, the captives had amassed a small supply of possibly useful items. Dox took note of the ones he knew about.
+
+\begin{dndtable}[lX]
+	{\large Item} & {\large Owner}\\
+	Crossbow Bolt & Dox\\
+	Rusty Iron Bar & Jhank\\
+	Dull Ruby & Danixoth\\
+	Gold Pieces & Danixoth and Alchemist\\
+	Rope Woven from Spider Webbing & Adran Oakenheel\\
+	Shard of Flint & the Tiefling
+\end{dndtable}
+
+By comparing stories of their capture, the prisoners deduced that they had been drugged. As they were discussing this, a somewhat large tarantula hesitantly approached Jurnthar, seeming passive and as friendly as an arachnid can. Jurnthar whistled to the creature and extends a friendly hand, and it initially recoiled, but was soon coaxed to a perch on the dwarf's shoulder.\\
+
+No longer able to withstand his frustration, Jhank rose to his feet and approached the Drow still clutching at his prison's bars. "What brought you here, captured by your own people?" he demanded. The Drow turned to face Jhank and looked him up and down as a sneer sprawled across his face.\\
+
+% \begin{wrapfigure}{L}{0.5\linewidth}
+% 	\centering
+% 	\includegraphics[width=0.7\linewidth]{img/dist/carith.png}
+% 	\caption{Carith\label{fig:carith}}
+% \end{wrapfigure}
+
+"You have no place speaking to me, animal." The Drow spat out that last word, as though it could possibly have been mistaken as anything but a grave insult. He then turned his back to Jhank and resumed his routine of grabbing at the bars.\\
+
+Dox, having heard this exchange, approached the pair by the door. The Drow noticed this and seemed to regard the half-Elf with considerably less disdain than the Lizardman. His expression quickly changed, however from one of mild interest to one of shock and disgust, as Dox slapped him hard across the face and warned him "Don't call him that." Jhank then grabbed his left hand in his own reptilian claw, balling it up into a fist before enclosing it with his other hand. With the implied threat in place, Jhank asks again: "Why are you here?".
+
+The Drow coldly replies "I will not be threatened by a beast."
+
+
+% For more columns, you can say \begin{dndtable}[your options here].
+% For instance, if you wanted three columns, you could say
+% \begin{dndtable}[XXX]. The usual host of tabular parameters are
+% available as well.
+% \begin{dndtable}[lX]
+%    	\textbf{Item}  & \textbf{Owner} \\
+%    	Crossbow bolt  & Evenwood \\
+%    	Metal bar  & Jhank
+% \end{dndtable}
+
+% % You can optionally not include the background by saying
+% % begin{monsterboxnobg}
+% \begin{monsterbox}{Monster Foo}
+% 	\textit{Small metasyntactic variable (goblinoid), neutral evil}\\
+% 	\hline%
+% 	\basics[%
+% 	armorclass = 12,
+% 	hitpoints  = \dice{3d8 + 3},
+% 	speed      = 50 ft
+% 	]
+% 	\hline%
+% 	\stats[
+%     STR = \stat{12}, % This stat command will autocomplete the modifier for you
+%     DEX = \stat{7}
+% 	]
+% 	\hline%
+% 	\details[%
+% 	% If you want to use commas in these sections, enclose the
+% 	% description in braces.
+% 	% I'm so sorry.
+% 	languages = {Common Lisp, Erlang},
+% 	]
+% 	\hline \\[1mm]
+% 	\begin{monsteraction}[Monster-super-powers]
+% 		This Monster has some serious superpowers!
+% 	\end{monsteraction}
+% 	\monstersection{Actions}
+% 	\begin{monsteraction}[Generate text]
+% 		This one can generate tremendous amounts of text! Though only when it wants to.
+% 	\end{monsteraction}
+
+% 	\begin{monsteraction}[More actions]
+%     See, here he goes again! Yet more text.
+% 	\end{monsteraction}
+% \end{monsterbox}
+
+% \section{Spells}
+
+% \begin{spell}
+% 	{Beautiful Typesetting}
+% 	{4th-level illusion}
+% 	{1 action}
+% 	{5 feet}
+% 	{S, M (ink and parchment, which the spell consumes)}
+% 	{Until dispelled}
+% 	You are able to transform a written message of any length into a beautiful scroll. All creatures within range that can see the scroll must make a wisdom saving throw or be charmed by you until the spell ends.
+
+% 	While the creature is charmed by you, they cannot take their eyes off the scroll and cannot willingly move away from the scroll. Also, the targets can make a wisdom saving throw at the end of each of their turns. On a success, they are no longer charmed.
+% \end{spell}
+
+% \section{Colors}
+
+% This package provides several global color variables to style \lstinline!commentbox!, \lstinline!quotebox!, \lstinline!paperbox!, and \lstinline!dndtable! environments.
+
+% \begin{dndtable}[lX]
+%   \textbf{Color}         & \textbf{Description} \\
+%   \lstinline!commentboxcolor! & Controls \lstinline!commentbox! background. \\
+%   \lstinline!paperboxcolor!   & Controls \lstinline!paperbox! background. \\
+%   \lstinline!quoteboxcolor!   & Controls \lstinline!quotebox! background. \\
+%   \lstinline!tablecolor!      & Controls background of even \lstinline!dndtable! rows. \\
+% \end{dndtable}
+
+% See Table~\ref{tab:colors} for a list of accent colors that match the core books.
+
+% \begin{table*}
+%   \begin{dndtable}[XX]
+%     \textbf{Color}                            & \textbf{Description} \\
+%     \lstinline!PhbLightGreen!                      & {\color{PhbLightGreen} Light green used in PHB Part 1} \\
+%     \lstinline!PhbLightCyan!                       & {\color{PhbLightCyan} Light cyan used in PHB Part 2} \\
+%     \lstinline!PhbMauve!                           & {\color{PhbMauve} Pale purple used in PHB Part 3} \\
+%     \lstinline!PhbTan!                             & {\color{PhbTan} Light brown used in PHB appendix} \\
+%     \lstinline!DmgLavender!                        & {\color{DmgLavender} Pale purple used in DMG Part 1} \\
+%     \lstinline!DmgCoral!                           & {\color{DmgCoral} Orange-pink used in DMG Part 2} \\
+%     \lstinline!DmgSlateGray! (\lstinline!DmgSlateGrey!) & {\color{DmgSlateGray} Blue-gray used in PHB Part 3} \\
+%     \lstinline!DmgLilac!                           & {\color{DmgLilac} Purple-gray used in DMG appendix} \\
+%   \end{dndtable}
+%   \caption{Colors supported by this package}%
+%   \label{tab:colors}
+% \end{table*}
 
 Alchemist approaches the mushroom-like creature and examines it, which reveals nothing of its mysterious nature. Danixoth attempts to communicate with the creature, saying "Hey buddy, I don't mean to intrude, I know you don't like talking to us, but I was wondering - What's your name?"
 
 "M-m-my name is Stool..." came the timid response. The creature had pressed itself back into the corner as far as it could go.
+{\centering
+	\includegraphics[width=0.2\textwidth]{img/dist/stool.png}
+	\caption{Stool\label{fig:stool}}
+}
 
-Meanwhile, Jhank approaches the Drow by the cell door and demands "What brought you here, captured by your own people?"
 
 The Drow turns and replies "You have no place speaking to me, animal."
 
@@ -127,13 +270,13 @@ The Drow walks away saying "I'm sorry, you're right I need to calm down" and wal
 
 Nithe extends his hand to Jhank and Dox with the introduction "Well met, I'm Nithe" "hi im keif"
 
-The purple man approaches Alchemist and offers a bet, "I bet you that Drow dies by morning, care to take that action?" to which Alchemist replies "How about something more interesting, I bet that if the orc and quigoth could be made to fight, the quigoth would handily win. Say, three gold pieces?" "Done"
+The purple man approaches Alchemist and offers a bet, "I bet you that Drow dies by morning, care to take that action?" to which Alchemist replies "How about something more interesting, I bet that if the orc and quaggoth could be made to fight, the quaggoth would handily win. Say, three gold pieces?" "Done"
 
-The purple man approaches the orc and says "Hey fuckhead, that guy said you fuck goats" and points at the quigoth. The orc runs over to the quigoth and begins screaming about how it would dismember it, but the quigoth says "No sir, I did nothing of the sort, and I mean you no harm."
+The purple man approaches the orc and says "Hey fuckhead, that guy said you fuck goats" and points at the quaggoth. The orc runs over to the quaggoth and begins screaming about how it would dismember it, but the quaggoth says "No sir, I did nothing of the sort, and I mean you no harm."
 
-The adventures then hear a clamoring from outside the cell, as guards approach and bark out "No fighting!". The orc rounds on the guards and screams "Why don't you get in here and try to stop me!" to which the guards respond by drawing their crossbows and warning the orc to back off, but he doesn't listen and one bolt lodges itself in his shoulder while the other slams into his leg. The orc stumbles forward one step and falls to the ground, unconcious. The drow reload and warn Jhank, Nithe and Dox and demand that they retreat from their position by the door, now backed with Quigoth muscle. One drow and two quigoth enter the cell, and drag the orc out, and then away into the hallway.
+The adventures then hear a clamoring from outside the cell, as guards approach and bark out "No fighting!". The orc rounds on the guards and screams "Why don't you get in here and try to stop me!" to which the guards respond by drawing their crossbows and warning the orc to back off, but he doesn't listen and one bolt lodges itself in his shoulder while the other slams into his leg. The orc stumbles forward one step and falls to the ground, unconcious. The Drow reload and warn Jhank, Nithe and Dox and demand that they retreat from their position by the door, now backed with quaggoth muscle. One Drow and two quaggoth enter the cell, and drag the orc out, and then away into the hallway.
 
-Alchemist remarked to the purple man "I guess our bet's off". The Quigoth approaches the purple man and protests "I never said that, why did you say I said that?!?" but the purple man just laughs and walks away, flipping a coin in his hand.
+Alchemist remarked to the purple man "I guess our bet's off". The quaggoth approaches the purple man and protests "I never said that, why did you say I said that?!?" but the purple man just laughs and walks away, flipping a coin in his hand.
 
 Jurnthar approaches the thin, dwarf-like man and asks "How's it going, brother?", mistaking him for a dwarf. "A lot better now that that filthy orc isn't in here anymore"
 "I see you got a lot of tribal tatoos, friend, what's up with that? My name's Jurnthar, by the way."
@@ -146,18 +289,18 @@ Jurnthar approaches the thin, dwarf-like man and asks "How's it going, brother?"
 "Aye, and one for you too"
 "It's good to meet a fellow dwarf in here"
 
-Dox approaches the Quigoth and asks "Hail. How is it that you are in here"
+Dox approaches the quaggoth and asks "Hail. How is it that you are in here"
 
 Ah yes, my appearance. You see, I'm actually an elf. My name's Darandil a prince from the Nelandril forest.
 That sucks.
 Quite.
 
-Danixoth approaches the other drow and says "I can see by your clothing that you are not low-born, how came you here?"
+Danixoth approaches the other Drow and says "I can see by your clothing that you are not low-born, how came you here?"
 "Another Drow, thank god. Are you from Menzobaranzan?"
 "No, but I am familiar with the area."
 "I had to run, and these guards - knowing what I am accused of - want to sacrifice me to Lolth. But I am innocent"
 "I too, am fleeing false persecution. Do you have any plan to escape? I see you at the bars mumbling sometimes, is that part of a plan?"
-"It's the only thing I can think to do. I'm a drow, surely I deserve a trial?"
+"It's the only thing I can think to do. I'm a Drow, surely I deserve a trial?"
 "Don't we all"
 
 Alchemist approaches the fish man, and mimicks his low growling noises. The creature's eyes snap open with an agility that was unexpected for a beast of his size, startling Alchemist a bit, but he quickly recovers and the two gurgle at each other. Alchemist turns around and asks Jhank, "Hey, you look weird, he looks weird, you guys know each other?" Jhank merely scoffs and turns away, but the fish man spoke "Do you wish to be awakened?"
@@ -196,7 +339,7 @@ Danixoth approaches and inquires "I forgot to get your name, sir" "My name is Ca
 
 >Diirka Deero
 
-\section{Awake}
+\chapter{2. Awake}
 
 
 \end{document}
